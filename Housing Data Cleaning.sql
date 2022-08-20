@@ -1,3 +1,6 @@
+-- This is my second project by following AlexTheAnalyst Youtube Video -- https://www.youtube.com/watch?v=8rO7ztF4NtU
+-- And for the dataset Nashville Housing -- https://www.kaggle.com/datasets/tmthyjames/nashville-housing-data
+
 -- We  want to clean the data in this table
 
 -- First we look at the table
