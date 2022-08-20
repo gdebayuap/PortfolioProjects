@@ -1,3 +1,6 @@
+-- This is my first project by following AlexTheAnalyst Youtube Video -- https://www.youtube.com/watch?v=qfyynHBFOsM
+-- And for the Dataset Covid-19 -- https://ourworldindata.org/covid-deaths
+
 --Read from CovidDeaths Table
 
 SELECT 
