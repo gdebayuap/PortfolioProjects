@@ -1,3 +1,8 @@
+/*
+EDA for Data Science Job Salaries Dataset
+You can get the dataset from --> https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries/download?datasetVersionNumber=1
+*/
+
 SELECT *
 FROM PortfolioProject.dbo.ds_salaries
 
@@ -25,12 +30,12 @@ ADD experience_category nvarchar(255);
 
 UPDATE PortfolioProject.dbo.ds_salaries
 SET experience_category = CASE
-							WHEN experience_level = 'EN' THEN 'Entry-Level/Junior'
-							WHEN experience_level = 'MI' THEN 'Mid-Level/Intermediate'
-							WHEN experience_level = 'SE' THEN 'Senior-Level/Expert'
-							WHEN experience_level = 'EX' THEN 'Executive-Level/Director'
-							ELSE experience_level
-						END
+				WHEN experience_level = 'EN' THEN 'Entry-Level/Junior'
+				WHEN experience_level = 'MI' THEN 'Mid-Level/Intermediate'
+				WHEN experience_level = 'SE' THEN 'Senior-Level/Expert'
+				WHEN experience_level = 'EX' THEN 'Executive-Level/Director'
+				ELSE experience_level
+			END
 
 -- Change employment_type CT, ..., PT into employment_category Contract, ..., Part-time.
 SELECT DISTINCT(employment_type)
@@ -52,12 +57,12 @@ ADD employment_category nvarchar(255);
 
 UPDATE PortfolioProject.dbo.ds_salaries
 SET employment_category = CASE 
-							WHEN employment_type = 'CT' THEN 'Contract'
-							WHEN employment_type = 'FL' THEN 'Freelance'
-							WHEN employment_type = 'FT' THEN 'Full-time'
-							WHEN employment_type = 'PT' THEN 'Part-time'
-							ELSE employment_type
-						END
+				WHEN employment_type = 'CT' THEN 'Contract'
+				WHEN employment_type = 'FL' THEN 'Freelance'
+				WHEN employment_type = 'FT' THEN 'Full-time'
+				WHEN employment_type = 'PT' THEN 'Part-time'
+				ELSE employment_type
+			END
 
 -- Create location by country name instead of country code
 SELECT *
